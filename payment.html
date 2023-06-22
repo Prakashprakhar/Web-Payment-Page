@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 15px 20px;
+            font-size: 17px;
+            padding: 8px;
+        }
+
+        .container {
+            background-color: #32ec45;
+            padding: 5px 20px 15px 20px;
+            border: 3px solid rgb(3, 3, 3);
+            border-radius: 4px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 200px;
+            padding: 12px;
+            border: 1px solid #acc;
+            border-radius: 5px;
+        }
+
+        fieldset {
+            background-color: #fff;
+            border: 1px solid #acc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <h1>Payment form</h1>
+            <hr color="black" >
+            <h2>Contact Information</h2>
+            <p>
+                Name: * <input type="text" name="Name" id="Name" placeholder="PRAKHAR PRAKASH" required>
+            </p>
+            <p>
+                Contact Number: <input type="text" name="contact_number" id="contact_number" placeholder="8434609004">
+            </p>
+            <p>
+                Address: <textarea name="address" id="address" rows="3" cols="200"
+                    placeholder="Kolkata"></textarea>
+            </p>
+            <fieldset>
+                <legend>
+                    Gender *
+                </legend>
+                <p>
+                    Male <input type="radio" name="gender" id="male" required>
+                    Female <input type="radio" name="gender" id="female" required>
+                    Others <input type="radio" name="gender" id="others" required>
+                </p>
+            </fieldset>
+            <p>
+                Email * <input type="email" name="email" id="email" placeholder="prakharprakash8942gmail.com" required>
+            </p>
+            <p>
+                Pin Code * <input type="number" name="pin_code" id="pin_code" placeholder="700102" required>
+            </p>
+            <p>
+                Type of Document:
+                <br>
+                <select name="doc" id="doc">
+                    <option value="">--Type of Document--</option>
+                    <option value="Aadhar">Aadhar</option>
+                    <option value="PAN">PAN card</option>
+                    <option value="Driving">Driving</option>
+                    <option value="Passport">Passport</option>
+                </select>
+            </p>
+            <p>
+                Upload Document: <input type="file" name="upload" id="upload">
+            </p>
+            <hr>
+            <h2>
+                Payment Information:
+            </h2>
+            <p>
+                Card Type: *
+                <br>
+                <select name="card_type" id="card_type" required>
+                    <option value="">--Select a card type--</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Rupay">Rupay</option>
+                    <option value="Mastercard">Mastercard</option>
+                </select>
+            </p>
+            <p>
+                Card Number: * <input type="number" name="card_number" id="card_number"
+                    placeholder="2395 7453 2418 9536" required>
+            </p>
+            <p>
+                Expiry Date: * <input type="date" name="expiry_date" id="expiry_date" required>
+            </p>
+            <p>
+                CVV: * <input type="password" name="cvv" id="cvv" required>
+            </p>
+            <input type="submit" value="Pay now" name="submit">
+        </form>
+    </div>
+</body>
+
+</html>
